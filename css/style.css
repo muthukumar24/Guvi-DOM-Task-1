@@ -1,3 +1,4 @@
+/* Pagination Header Text */
 #title
 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -7,6 +8,7 @@
     text-align: center;
 }
 
+/* Pagination Description Text */
 #description
 {
     text-align: center;
@@ -14,29 +16,12 @@
     font-size: 1.3rem;
 }
 
-.pagination-container 
-{
-    margin-top: 10px;
-}
-
-.pagination button 
-{
-    padding: 5px 15px;
-    cursor: pointer;
-    border: 1px solid #000000;
-    background-color: #4242c9;
-    color: #ffffff;
-}
-
-.pagination button:hover {
-    background-color: #000000;
-    color: #ffffff;
-}
-
+/* Table */
 table 
 {
     border-collapse: collapse;
-    width: 100%;
+    width: 90% !important;
+    margin: auto;
 }
 
 th 
@@ -52,3 +37,40 @@ tr, td
     text-align: left;
 }
 
+/* Pagination Button Container */
+.pagination-container 
+{
+    margin-top: 10px;
+}
+
+.pagination
+{
+    column-gap: 2px;
+}
+
+/* Pagination Buttons */
+.pagination button 
+{
+    padding: 5px 15px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    background-color: #4242c9;
+    color: #ffffff;
+}
+
+.pagination button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+@media screen and (max-width:576px)
+{
+    .pagination 
+    {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        row-gap: 2px;
+    }
+}

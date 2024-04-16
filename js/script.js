@@ -1,12 +1,12 @@
 // Creating XML Request object
 const req = new XMLHttpRequest();
-// What should i do and where i have to connect
+// Opens a Request with URL along with GET method to fetch datas
 req.open('GET', 'https://raw.githubusercontent.com/Rajavasanthan/jsondata/master/pagenation.json')
 // Sending the request to the server
 req.send() 
 // what to do when the request is completed successfully
 req.onload = function () {
-        const jsonData = JSON.parse(this.response)
+        const jsonData = JSON.parse(this.response) // Parsing the datas into JSON format
 
 // Number of items per page
 const itemsPerPage = 10;
@@ -101,5 +101,6 @@ function renderTable() {
     buttonsContainer.appendChild(paginationButtons);
 }
 
+//Calling Render Table Function
 renderTable()
 }
